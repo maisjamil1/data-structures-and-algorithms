@@ -11,7 +11,8 @@ we will Write a function called Array Shift which takes an array and a number as
 ## Solution
 <!-- ![img](./ArrayShift/challenges/data_structures_and_algorithms/data_structures_and_algorithms/assets/array-shift.jpg) -->
 ![img](../../../../assets/array-shift.jpg)
-
+## link
+https://github.com/maisjamil1/data-structures-and-algorithms/pull/4
 
 _________________________________________________________
 - [ ] Top-level README “Table of Contents” is updated
