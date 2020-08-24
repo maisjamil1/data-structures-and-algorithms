@@ -153,9 +153,30 @@ class LinkedList():
                 return "node is not exist"
         except Exception as err:
             print(f'error line 155 __str__ {err}')
+    # _________________________________________
+    def kth_from_end(self, k):
+        """
+            this method takes a number k, as a parameter. Return the node’s value that is k from 
+            the end of the linked list. 
+        """
+        try:
+            
+            nodes_counter = -1
+            current = self.head
+            while current != None:
+                current = current.next
+                nodes_counter = nodes_counter + 1
+            if nodes_counter >= k:
+                current = self.head
+                for i in range(nodes_counter - k):
+                    current = current.next
+
+            return current.val
 
 
-        
+        except:
+           return 'value not found'
+
 
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++
 if __name__=="__main__":
@@ -175,4 +196,7 @@ if __name__=="__main__":
     print("-"*50)
     print(fruits.insertAfter('Apple', 'after'))
     print(fruits.make_list)
+    print("-"*50)
+    print(fruits.kth_from_end(0))
+    print(fruits.kth_from_end(2))
 
