@@ -120,8 +120,48 @@ def test_insertAfter():
     anime.insertAfter("death note","one puch man")
     assert anime.__str__() == '<Slam dunk -><death note -><one puch man -><Naruto ->None'
 
+# ________________________________________________________________
 
 
 
+def test_kth_from_end1_Happy_Path():
+    anime = LinkedList()
+    anime.append(1)
+    anime.append(3)
+    anime.append(8)
+    anime.append(2)
+    assert anime.kth_from_end(3) == 1
+    assert anime.kth_from_end(1) == 8
 
+# ________________________________________________________________
 
+def test_kth_from_end_greater_than_length():
+    anime = LinkedList()
+    anime.append(1)
+    anime.append(3)
+    anime.append(8)
+    anime.append(2)
+    assert anime.kth_from_end(5) =='value not found'
+# ________________________________________________________________
+
+def test_kth_from_end_same_length():
+    anime = LinkedList()
+    anime.append(1)
+    anime.append(3)
+    anime.append(8)
+    anime.append(2)
+    assert anime.kth_from_end(4) =='value not found'
+# ________________________________________________________________
+
+def test_kth_from_end_not_positive():
+    anime = LinkedList()
+    anime.append(1)
+    anime.append(3)
+    anime.append(8)
+    assert anime.kth_from_end(-1) =='value not found'
+# ________________________________________________________________
+
+def test_kth_from_end_size1():
+    anime = LinkedList()
+    anime.append(3)
+    assert anime.kth_from_end(0) ==3

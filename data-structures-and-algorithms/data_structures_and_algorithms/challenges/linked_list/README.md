@@ -1,4 +1,5 @@
 # linked list
+![img](../../../../assets/linkedlist_ch7.jpg.jpg)
 
 ## Challenge
 
@@ -13,15 +14,17 @@ Define a method called toString (or __str__ in Python) which takes in no argumen
 ## Approach & Efficiency
  Big O =>
 (include)access an element  Big(o)=O(n)
+
 add a new node with that value to the head of the list Big(o)=O(1)
+
 append a new node to the end of the list Big(o)=O(1)
 
- 
+Big O => for ll.kthFromEnd(k) is o(n) we will traverse through each node in the linked list until we reach the k
 
 ## Solution
 
 ## link
-https://github.com/maisjamil1/data-structures-and-algorithms/pull/6
+https://github.com/maisjamil1/data-structures-and-algorithms/pull/8
 
 _________________________________________________________
 - [ ] Top-level README “Table of Contents” is updated
@@ -34,3 +37,6 @@ _________________________________________________________
 - [ ] Summary, Description, Approach & Efficiency, Solution
 - [ ] Link to code
 - [ ] Picture of whiteboard
+
+## Note :
+Abedalaziz ,Osama and me solved challenge 7 together after we finished the lab :)
