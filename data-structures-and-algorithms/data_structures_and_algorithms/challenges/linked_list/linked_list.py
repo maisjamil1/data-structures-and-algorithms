@@ -92,6 +92,67 @@ class LinkedList():
             return output
         except Exception as err:
             print(f'error line 94 __str__ {err}')
+    # _________________________________________
+    def insertBefore(self, val, newVal):
+        """
+        this method will add a new node with the given newValue immediately 
+        before the given value node
+        """
+        try:
+            current = self.head
+            inserted_node = Node(newVal)
+            if  self.head==None:
+                self.head = inserted_node
+            else:
+                if self.head.val == val:
+                    previous_node = self.head
+                    self.head = inserted_node
+                    inserted_node.next = previous_node
+                    return f"from insertBefore method {newVal}"
+                    # pass
+                else:
+                    current = self.head
+                while current.next:
+                    if current.next.val == val:
+                        previous_node = current.next
+                        current.next = inserted_node
+                        inserted_node.next = previous_node
+                        return f"from insertBefore method {newVal}"
+                        #pass
+                    else:
+                        current = current.next
+                return "node is not exist!"
+                #pass
+        except Exception as err:
+            print(f'error line 127 __str__ {err}')
+    # _________________________________________
+    def insertAfter(self, val, newVal):
+        '''
+        this method will add a new node with the given newValue immediately after
+         the first value node
+        '''
+        try:
+            current = self.head
+            inserted_node = Node(newVal)
+            if self.head==None:
+                    self.head = inserted_node
+            else:
+                current = self.head
+                while current.next :
+                    if current.next.val == val:
+                        current = current.next
+                        previous_node = current.next
+                        current.next = inserted_node
+                        inserted_node.next = previous_node
+                        return f"from insertAfter method {newVal}"
+                        # pass
+                    else:
+                        current = current.next
+                        # pass
+                        
+                return "node is not exist"
+        except Exception as err:
+            print(f'error line 155 __str__ {err}')
 
 
         
@@ -105,6 +166,13 @@ if __name__=="__main__":
     fruits.insert('first')
     print(fruits.includes('Apple'))#true
     print(fruits.includes('mais'))#false
+    print("-"*50)
     print(fruits)#<first -><Apple -><Orange -><Banana ->None
     print(fruits.make_list)#['first', 'Apple', 'Orange', 'Banana']
+    print("-"*50)
+    print(fruits.insertBefore('Banana', 'mm'))
+    print(fruits.make_list)
+    print("-"*50)
+    print(fruits.insertAfter('Apple', 'after'))
+    print(fruits.make_list)
 

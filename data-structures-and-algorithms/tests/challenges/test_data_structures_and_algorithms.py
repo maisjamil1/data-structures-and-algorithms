@@ -90,6 +90,38 @@ def test_values_in_linked_list(prepare_data):
     actual ='<BLEACH -><God of high school -><Deat note ->None'
     assert expected == actual
 
+# ________________________________________________________________
+def test_insertbefore():
+    anime = LinkedList()
+    anime.append("Slam dunk")
+    anime.append("death note")
+    anime.insertBefore("death note","one puch man")
+    assert anime.__str__() == '<Slam dunk -><one puch man -><death note ->None'
+# ________________________________________________________________
+def test_insertbefore_first_node():
+    anime = LinkedList()
+    anime.append("Slam dunk")
+    anime.append("death note")
+    anime.insertBefore("Slam dunk","one puch man")
+    assert anime.__str__() == '<one puch man -><Slam dunk -><death note ->None'
+# ________________________________________________________________
+def test_insertAfter_lastnode():
+    anime = LinkedList()
+    anime.append("Slam dunk")
+    anime.append("death note")
+    anime.insertAfter("death note","one puch man")
+    assert anime.__str__() == '<Slam dunk -><death note -><one puch man ->None'
+# ________________________________________________________________
+def test_insertAfter():
+    anime = LinkedList()
+    anime.append("Slam dunk")
+    anime.append("death note")
+    anime.append("Naruto")
+    anime.insertAfter("death note","one puch man")
+    assert anime.__str__() == '<Slam dunk -><death note -><one puch man -><Naruto ->None'
+
+
+
 
 
 
