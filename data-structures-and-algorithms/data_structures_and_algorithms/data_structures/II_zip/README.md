@@ -10,8 +10,8 @@ Write a function called zipLists which takes two linked lists as arguments. Zip 
 
 ## Solution
 
-![img](../../../../assets/zip_ll.jpg)
-![img](../../../assets/zip_ll.jpg)
+![img](../../../../assets/zip_linkedlist)
+![img](../../../assets/zip_linkedlist)
 ## link
 https://github.com/maisjamil1/data-structures-and-algorithms/pull/11
 
