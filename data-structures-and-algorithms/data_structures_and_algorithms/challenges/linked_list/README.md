@@ -1,5 +1,7 @@
 # linked list
-![img](../../../../assets/linkedlist_ch7.jpg.jpg)
+
+![img](../../../../assets/insert.jpg)
+![img](../../../assets/insert.jpg)
 
 ## Challenge
 
