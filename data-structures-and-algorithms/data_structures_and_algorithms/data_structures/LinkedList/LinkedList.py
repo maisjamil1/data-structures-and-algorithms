@@ -173,12 +173,18 @@ class LinkedList():
                 current = self.head
                 for i in range(nodes_counter - k):
                     current = current.next
+            else :
+                raise ValueError
 
             return current.val
 
 
-        except:
-           return 'value not found'
+        except ValueError as err:
+           return(f" ValueError {err}")
+        except Exception as err:
+           return(f"{err}")
+        #    return("ValueError")
+        #    return 'value not found'
 
     # _________________________________________
 
