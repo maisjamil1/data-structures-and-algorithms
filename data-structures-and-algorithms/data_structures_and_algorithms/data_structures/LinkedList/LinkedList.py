@@ -11,8 +11,11 @@ class LinkedList():
     """
     this class will create a linked list 
     """
-    def __init__(self):
+    def __init__(self,items=[]):
         self.head = None
+        for i in items:
+            self.append(i)
+
     # _________________________________________
 
     def insert(self, val):
@@ -179,71 +182,64 @@ class LinkedList():
 
     # _________________________________________
 
-    @staticmethod
-    def zipLists(list1,list2):
-        """
-        akes two linked lists as arguments. Zip the two linked lists together into one so that
-        the nodes alternate between the two lists and return a reference to the head of the zipped list. 
-        """
-        try:
-            nodes_counter_li1 = 0
-            nodes_counter_li2 = 0
-            current = list1.head
-            while current != None:
-                current = current.next
-                nodes_counter_li1 = nodes_counter_li1 + 1 
+    # @staticmethod
+    # def zipLists(list1,list2):
+    #     """
+    #     akes two linked lists as arguments. Zip the two linked lists together into one so that
+    #     the nodes alternate between the two lists and return a reference to the head of the zipped list. 
+    #     """
+    #     try:
+    #         nodes_counter_li1 = 0
+    #         nodes_counter_li2 = 0
+    #         current = list1.head
+    #         while current != None:
+    #             current = current.next
+    #             nodes_counter_li1 = nodes_counter_li1 + 1 
 
-            current = list2.head
-            while current != None:
-                current = current.next
-                nodes_counter_li2 = nodes_counter_li2 + 1 
+    #         current = list2.head
+    #         while current != None:
+    #             current = current.next
+    #             nodes_counter_li2 = nodes_counter_li2 + 1 
 
-            if nodes_counter_li1>nodes_counter_li2:
-                curr = list1.head 
-                list2_curr = list2.head 
-                while curr != None and list2_curr != None: 
-                    list1_next = curr.next
-                    list2_next = list2_curr.next
+    #         if nodes_counter_li1>nodes_counter_li2:
+    #             curr = list1.head 
+    #             list2_curr = list2.head 
+    #             while curr != None and list2_curr != None: 
+    #                 list1_next = curr.next
+    #                 list2_next = list2_curr.next
         
-                    list2_curr.next = list1_next 
-                    curr.next = list2_curr 
+    #                 list2_curr.next = list1_next 
+    #                 curr.next = list2_curr 
 
-                    curr = list1_next 
-                    list2_curr = list2_next 
+    #                 curr = list1_next 
+    #                 list2_curr = list2_next 
 
-                list2.head = list2_curr 
-                return list1
-            else:
-                curr = list2.head 
-                list1_curr = list1.head 
-                while curr != None and list1_curr != None: 
-                    list2_next = curr.next
-                    list1_next = list1_curr.next
+    #             list2.head = list2_curr 
+    #             return list1
+    #         else:
+    #             curr = list2.head 
+    #             list1_curr = list1.head 
+    #             while curr != None and list1_curr != None: 
+    #                 list2_next = curr.next
+    #                 list1_next = list1_curr.next
         
-                    list1_curr.next = list2_next 
-                    curr.next = list1_curr 
+    #                 list1_curr.next = list2_next 
+    #                 curr.next = list1_curr 
 
-                    curr = list2_next 
-                    list1_curr = list1_next 
+    #                 curr = list2_next 
+    #                 list1_curr = list1_next 
 
-                list1.head = list1_curr 
-                return list2
-        except Exception as err:
-            print(f'error line 247 __str__ {err}')
-            
-
+    #             list1.head = list1_curr 
+    #             return list2
+    #     except Exception as err:
+    #         print(f'error line 247 __str__ {err}')
 
 
 
-  
-  
 
 
-  
-
-
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++
 if __name__=="__main__":
+    pass
     # fruits = LinkedList()
     # fruits.append('Apple')
     # fruits.append('Orange')
@@ -263,25 +259,21 @@ if __name__=="__main__":
     # print("-"*50)
     # print(fruits.kth_from_end(0))
     # print(fruits.kth_from_end(2))
-    print("-"*50)
-    llist1 = LinkedList() 
-    llist2 = LinkedList() 
-    llist1.append(3) 
-    llist1.append(2) 
-    llist1.append(1) 
-    llist1.append(5) 
-    llist1.append(5) 
-    print(llist1)
-    print("-"*50)
-    llist2.append(8) 
-    llist2.append(7) 
-    llist2.append(6) 
-    # llist2.append(0) 
-    # llist2.append(0) 
-    print(llist2)
-    print("-"*50)
-
-    print(LinkedList().zipLists(llist1,llist2))
-    
- 
-
+    # print("-"*50)
+    # llist1 = LinkedList() 
+    # llist2 = LinkedList() 
+    # llist1.append(3) 
+    # llist1.append(2) 
+    # llist1.append(1) 
+    # llist1.append(5) 
+    # llist1.append(5) 
+    # print(llist1)
+    # print("-"*50)
+    # llist2.append(8) 
+    # llist2.append(7) 
+    # llist2.append(6) 
+    # # llist2.append(0) 
+    # # llist2.append(0) 
+    # print(llist2)
+    # print("-"*50)
+   
