@@ -178,22 +178,7 @@ class LinkedList():
            return 'value not found'
 
     # _________________________________________
-    # def zipLists(self,list1,list2): 
-    #     curr = list1.head 
-    #     list2_curr = list2.head 
-    #     while curr != None and list2_curr != None: 
-    #         list1_next = curr.next
-    #         list2_next = list2_curr.next
-  
-    #         list2_curr.next = list1_next 
-    #         curr.next = list2_curr 
 
-    #         curr = list1_next 
-    #         list2_curr = list2_next 
-
-    #     list2.head = list2_curr 
-    #     return list1
-    # _________________________________________
     @staticmethod
     def zipLists(list1,list2):
         """

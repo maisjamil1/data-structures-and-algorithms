@@ -233,49 +233,13 @@ class LinkedList():
     #             return list2
     #     except Exception as err:
     #         print(f'error line 247 __str__ {err}')
-    # _________________________________________
-
-
-def zipLists(ll1,ll2):
-        """
-        akes two linked lists as arguments. Zip the two linked lists together into one so that
-        the nodes alternate between the two lists and return a reference to the head of the zipped list. 
-        """
-        try:
-            if not ll1:
-                return ll2
-            if not ll2:
-                return ll1
-            output = LinkedList()
-            current1 = ll1.head
-            current2 = ll2.head
-            while current1:
-                output.append(current1.val)
-                if current2:
-                    output.append(current2.val)
-                    current2=current2.next
-                current1=current1.next
-            while current2:
-                output.append(current2.val)
-                current2=current2.next
-            return output
-        except Exception as err:
-            print(f'error line 263 __zip__ {err}') 
-
-            
 
 
 
 
-  
-  
 
-
-  
-
-
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++
 if __name__=="__main__":
+    pass
     # fruits = LinkedList()
     # fruits.append('Apple')
     # fruits.append('Orange')
@@ -312,12 +276,4 @@ if __name__=="__main__":
     # # llist2.append(0) 
     # print(llist2)
     # print("-"*50)
-    # print(LinkedList().zipLists(llist1,llist2))
-    print("-"*50)
-    ll1=LinkedList([1,2,3,4])
-    ll2=LinkedList([0,0,0,0])
-    ll3=zipLists(ll1,ll2)
-    print(ll1)
-    print(ll2)
-    print("-"*50)
-    print(ll3)
+   
