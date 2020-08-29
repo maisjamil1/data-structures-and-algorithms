@@ -1,3 +1,5 @@
+# from data_structures_and_algorithms.challenges.linked_list.linked_list import Node
+
 class Node:
     """
     this class will create a new node
