@@ -9,3 +9,15 @@
 | Paragraph   | Text        |
 | challenge5  | [link5](./data_structures_and_algorithms/challenges/linked_list/linked_list.py)|
 | Paragraph   | Text        |
+| challenge6  | [link5](./data_structures_and_algorithms/challenges/linked_list/linked_list.py)|
+| Paragraph   | Text        |
+| challenge7  | [link5](./data_structures_and_algorithms/challenges/linked_list/linked_list.py)|
+| Paragraph   | Text        |
+| challenge9  | [link5](./data_structures_and_algorithms/challenges/linked_list/linked_list.py)|
+| Paragraph   | Text        |
+| challenge10  | [link5](./data_structures_and_algorithms/challenges/linked_list/linked_list.py)|
+| Paragraph   | Text        |
+| challenge11  | [link5](./data_structures_and_algorithms/challenges/linked_list/linked_list.py)|
+| Paragraph   | Text        |
+| challenge12  | [link5](./data_structures_and_algorithms/challenges/linked_list/linked_list.py)|
+| Paragraph   | Text        |
