@@ -66,5 +66,5 @@ if __name__ == '__main__':
     enqueue("kera",'cat')
     enqueue("jojo",'cat')
     enqueue("Abbas",'dog')
-    print(nums)
-    print(nums.__str__())
+    print(animal_1)
+    print(animal_1.__str__())
