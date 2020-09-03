@@ -2,7 +2,7 @@ class Pseudo_queue:
     def __init__(self):
         self.input =Stack()
         self.output =Stack()
-        self.final_output =Stack()
+        # self.final_output =Stack()
 
     # _________________________________________________
 
@@ -29,16 +29,19 @@ class Pseudo_queue:
                 self.output.push(valx.value)
                 curr=curr.next
 
-            self.output.pop()
+            item=self.output.pop()
 
             curr=self.output.top
             while curr:
                 valx=self.output.pop()
-                self.final_output.push(valx.value)
+                self.input.push(valx.value)
                 curr=curr.next
-            return self.final_output
+            # return self.final_output
+            # return self.input
+            return item.value
         except Exception as err:
             print(f'error ::: {err}')
+
 
 
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -132,7 +135,7 @@ if __name__ == '__main__':
     ch11.enqueue(5)
     print(ch11.input)
     print(ch11.dequeue())
-    print(ch11.final_output)
+    # print(ch11.output)
 
 
     # ________________________________
