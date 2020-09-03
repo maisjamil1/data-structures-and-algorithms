@@ -18,16 +18,16 @@ def test_Happy_Path_dequeue():
     ch11.enqueue(15)
     ch11.enqueue(10)
     ch11.enqueue(5)
-    assert ch11.dequeue().__str__()=="-> <5>-> <10>-> <15>"
+    assert ch11.dequeue()==20
 
 def test_failure1():
     ch11 = Pseudo_queue()
-    ch11.dequeue()
-    assert ch11.final_output.__str__()==""
+    
+    assert ch11.dequeue()==None
 
 def test_failure2():
     ch11 = Pseudo_queue()
-    assert ch11.dequeue().__str__()==""
+    assert ch11.dequeue()==None
 
 def test_Edge_Case():
     ch11 = Pseudo_queue()
@@ -37,4 +37,4 @@ def test_Edge_Case():
 def test_Edge_Case2():
     ch11 = Pseudo_queue()
     ch11.enqueue(None)
-    assert ch11.dequeue().__str__()==""
+    assert ch11.dequeue()==None
