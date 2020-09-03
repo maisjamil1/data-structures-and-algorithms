@@ -53,3 +53,8 @@ def test_10():
     actual=multi_bracket_validation('[}')
     expected=False
     assert actual == expected
+
+def test_11():
+    actual=multi_bracket_validation('({)}')
+    expected=False
+    assert actual == expected
