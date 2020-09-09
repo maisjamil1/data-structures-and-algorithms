@@ -67,35 +67,74 @@ class BinaryTree:
 
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-def FizzBuzzTree(tree):
-    """
-    this method takes a k-ary tree as an argument.it will determine whether or
-    not the value of each node is divisible by 3, 5 or both. 
+# def FizzBuzzTree(tree):
+#     """
+#     this method takes a k-ary tree as an argument.it will determine whether or
+#     not the value of each node is divisible by 3, 5 or both. 
 
-    """
-    li=tree.pre_order()# Root->Left->Right
-    # return li
-    output=[]
-    try:
+#     """
+#     li=tree.pre_order()# Root->Left->Right
+#     # return li
+#     output=[]
+#     try:
     
-        if li:
-            for val in li :
-                if val%5==0 and val %3==0:
-                    output.append('FizzBuzz')
-                elif val%3==0:
-                    output.append('Fizz')
-                elif val%5==0:
-                    output.append('Buzz')
-                else:
-                    output.append(str(val))
-            return output
+#         if li:
+#             for val in li :
+#                 if val%5==0 and val %3==0:
+#                     output.append('FizzBuzz')
+#                 elif val%3==0:
+#                     output.append('Fizz')
+#                 elif val%5==0:
+#                     output.append('Buzz')
+#                 else:
+#                     output.append(str(val))
+#             return output
+#         else:
+#             return 'the tree is empty'
+#     except Exception as err:
+#         return err   
+
+
+
+#code review
+def FizzBuzzTree(tree):
+    try:
+        new_tree = BinaryTree()
+
+        if tree.root:
+            
+            def _walk(curr):
+                node = Node(fizz_buzz_func(curr.value))
+
+                if curr.left:
+                    node.left = _walk(curr.left)
+                if curr.right:
+                    node.right = _walk(curr.right)
+                return node
+
+
+            new_tree.root = _walk(tree.root)
+            return new_tree
         else:
             return 'the tree is empty'
-    except Exception as err:
-        return err    
-               
-    # return output
 
+    except Exception as err:
+        print(err)
+
+
+
+# __________________________________________________
+def fizz_buzz_func(value):
+    if value % 3 == 0 and value % 5 == 0 :
+        return "FizzBuzz"
+
+    elif value % 5 == 0:
+        return "Buzz"
+
+    elif value % 3 == 0:
+        return "Fizz"
+    else:
+        return str(value)
 
 
 
@@ -122,7 +161,7 @@ if __name__=='__main__':
     bt.root.left.right.left = Node(5)
     bt.root.left.right.right = Node(11)
 
-    # print(f'pre_order {bt.pre_order()}')
+    print(f'pre_order {bt.pre_order()}')
     # print(f'in_order {bt.in_order()}')
     # print(f'post_order {bt.post_order()}')
     # print('*'*50)
@@ -130,6 +169,7 @@ if __name__=='__main__':
 
 
     print('*'*50)
-    print(FizzBuzzTree(bt))
+    # print(FizzBuzzTree(bt))
+    print(FizzBuzzTree(bt).pre_order())
     print('*'*50)
 

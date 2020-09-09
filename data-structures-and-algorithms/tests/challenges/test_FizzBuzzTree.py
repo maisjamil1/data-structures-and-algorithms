@@ -15,7 +15,7 @@ def test_1():
 
     bt.root.left.right.left = Node(5)
     bt.root.left.right.right = Node(11)
-    assert FizzBuzzTree(bt)==['2', '7', '2', 'Fizz', 'Buzz', '11', 'Buzz', 'Fizz', 'FizzBuzz']
+    assert FizzBuzzTree(bt).pre_order()==['2', '7', '2', 'Fizz', 'Buzz', '11', 'Buzz', 'Fizz', 'FizzBuzz']
 
 # __________________________________________
 
@@ -25,7 +25,7 @@ def test_2():
     bt.root= Node(-3)
     bt.root.left = Node(-15)
     bt.root.right = Node(-5)
-    assert FizzBuzzTree(bt) == ['Fizz', 'FizzBuzz', 'Buzz']
+    assert FizzBuzzTree(bt).pre_order() == ['Fizz', 'FizzBuzz', 'Buzz']
 
 # __________________________________________
 def test_empty_tree():
