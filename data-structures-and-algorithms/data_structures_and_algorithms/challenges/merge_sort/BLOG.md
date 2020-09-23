@@ -92,6 +92,7 @@ def merge(left, right,Arr):
 
 ![img](../../../../assets/mergeSort.jpg)
 ![img](../../../../assets/mergeSort2.jpg)
+![img](../../../../assets/mergeSort3.jpg)
 
 
 
