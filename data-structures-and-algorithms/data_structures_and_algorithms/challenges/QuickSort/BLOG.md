@@ -79,12 +79,12 @@ def Swap(arr, i, low):
 ## Solution
 
 ![img](../../../../assets/quickSort.jpg)
-![img](../../../../assets/quickSort2.jpg)
+![img](../../../../assets/quickSortt2.jpg)
 
 
 
 ## link
-https://github.com/maisjamil1/data-structures-and-algorithms/pull/31
+https://github.com/maisjamil1/data-structures-and-algorithms/pull/33
 
 _________________________________________________________
 - [ ] Top-level README “Table of Contents” is updated
